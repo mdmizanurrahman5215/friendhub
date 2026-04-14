@@ -6,7 +6,7 @@ export default function CustomNavLink({ to, children, icon }) {
       to={to}
       className={({ isActive }) =>
         `flex items-center gap-2 px-3 py-2 rounded-md ${
-          isActive ? "bg-blue-500 text-white" : "text-gray-600"
+          isActive ? "bg-[#244D3F] text-white" : "text-gray-600"
         }`
       }
     >
