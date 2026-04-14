@@ -1,12 +1,15 @@
-export default function Card({data}) {
+export default function Card({data, onClick, }) {
   const {name, picture, status, tags, days_since_contact
 }=data
-  console.log(data);
+  // console.log(data);
   
 
   return (
    <>
-<div className=" shadow-md rounded-lg p-4 flex flex-col items-center gap-2 cursor-pointer hover:shadow-lg transition">
+<div className=" shadow-md rounded-lg p-4 flex flex-col items-center gap-2 cursor-pointer hover:shadow-lg transition"
+onClick={onClick}
+
+>
   
     <div className="w-40 h-40 bg-red-300 rounded-full">
        <img src={picture} alt={name} className="w-full h-full object-cover rounded-full overflow-hidden" />
