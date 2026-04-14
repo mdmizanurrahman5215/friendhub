@@ -3,6 +3,8 @@ import Button from "../ui/Button";
 import StatsCard from "./../ui/StatsCard";
 import { BiSolidPhoneCall, BiVideo } from "react-icons/bi";
 import { BsChatLeftTextFill } from "react-icons/bs";
+import Timeline from './../../pages/Timeline';
+import { useAppContext } from "../../context/AppContext";
 
 function Modal({ user, onClose }) {
   const {
@@ -17,11 +19,25 @@ function Modal({ user, onClose }) {
     bio,
   } = user;
   console.log(user);
+  const {timeline, setTimeline} = useAppContext();
+  console.log(timeline);
+  
+
+  const handleButtonClick = (action) => {
+   if (action === "Call") {
+    setTimeline((prev)=> [...prev, {type: "Call", name, timestamp: new Date().toLocaleString(), icon: <BiSolidPhoneCall /> }])
+   
+   } else if (action === "Text") {
+    setTimeline((prev)=> [...prev, {type: "Text", name, timestamp: new Date().toLocaleString(), icon: <BsChatLeftTextFill /> }])
+   } else if (action === "Video") {
+    setTimeline((prev)=> [...prev, {type: "Video", name, timestamp: new Date().toLocaleString(), icon: <BiVideo /> }])
+   }
+  };
 
   return (
     <div
       className="fixed inset-0 bg-black/50 flex justify-center items-center"
-      onClick={onClose}
+      // onClick={onClose}
     >
       <div className="bg-white p-6 rounded-xl grid grid-cols-3 w-[80%]">
         {/* left part  */}
@@ -107,15 +123,26 @@ function Modal({ user, onClose }) {
               Quick Check-in
             </h3>
             <div className="grid grid-cols-3 gap-4 p-4">
-              <StatsCard title="Call" icon={<BiSolidPhoneCall />} />
-              <StatsCard title="Text" icon={<BsChatLeftTextFill />} />
-              <StatsCard
+              <button onClick={() => handleButtonClick("Call")}>
+                <StatsCard title="Call" icon={<BiSolidPhoneCall />} 
+                
+              />
+              </button>
+              <button onClick={() => handleButtonClick("Text")}> <StatsCard title="Text" icon={<BsChatLeftTextFill />} /></button>
+              <button onClick={() => handleButtonClick("Video")}>
+                <StatsCard
                 title="Video"
                 icon={<BiVideo />}
                 className="text-2xl"
               />
+              </button>
+             
+              
             </div>
           </div>
+          <button onClick={onClose} className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded">
+            Close
+          </button>
         </div>
       </div>
       {/* right part  */}
