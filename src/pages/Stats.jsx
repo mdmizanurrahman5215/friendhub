@@ -1,11 +1,37 @@
-import React from 'react'
+import React from "react";
+import { useAppContext } from "../context/AppContext";
+import { PieChart, Pie, ResponsiveContainer, Tooltip, Legend } from "recharts";
 
 const Stats = () => {
-  return (
-    <div>
-        <h1>Stats</h1>
-    </div>
-  )
-}
+  const { timeline } = useAppContext();
 
-export default Stats
+  const groupedData = Object.values(
+    timeline.reduce((acc, item) => {
+      if (!acc[item.type]) {
+        acc[item.type] = { name: item.type, value: 0 };
+      }
+      acc[item.type].value += 1;
+      return acc;
+    }, {})
+  );
+
+  return (
+    <div style={{ width: "100%", height: "400px" }}>
+      <ResponsiveContainer>
+        <PieChart>
+          <Pie
+            data={groupedData}
+            dataKey="value"
+            nameKey="name"
+            innerRadius="60%"
+            outerRadius="80%"
+          />
+          <Tooltip />
+          <Legend />
+        </PieChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
+
+export default Stats;
