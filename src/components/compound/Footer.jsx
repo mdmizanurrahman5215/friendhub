@@ -1,18 +1,18 @@
-function Footer({ children }) {
-  return <footer className="bg-gray-100 p-6">{children}</footer>;
+function ModalFooter({ children }) {
+  return <footer className="bg-[#244D3F] container mx-auto p-6 text-white flex flex-col justify-center items-center text-center ">{children}</footer>;
 }
 
-Footer.Section = function ({ title, children }) {
+ModalFooter.Section = function ({ title, children }) {
   return (
-    <div>
-      <h4 className="font-bold">{title}</h4>
+    <div className="mb-4">
+      <h4 className="text-4xl font-bold mb-4">{title}</h4>
       <div>{children}</div>
     </div>
   );
 };
 
-Footer.Bottom = function ({ children }) {
-  return <div className="text-center mt-4 text-sm">{children}</div>;
+ModalFooter.Bottom = function ({ children }) {
+  return <div className="text-center mt-4 text-sm w-full">{children}</div>;
 };
 
-export default Footer;
+export default ModalFooter;

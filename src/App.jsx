@@ -5,6 +5,8 @@ import Hero from "./components/Hero";
 import Stats from "./pages/Stats";
 import Timeline from "./pages/Timeline";
 import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Footer from "./layout/Footer";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/stats" element={<Stats />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

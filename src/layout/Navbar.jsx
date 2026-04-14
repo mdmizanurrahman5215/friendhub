@@ -16,7 +16,7 @@ const Navbar = () => {
             <CustomNavLink to="/" icon={<FaHome  size={18} />}>
               Home
             </CustomNavLink>
-            <CustomNavLink to="/recent" icon={<IoTimeOutline   size={18} />}>
+            <CustomNavLink to="/timeline" icon={<IoTimeOutline   size={18} />}>
               Timeline
             </CustomNavLink>
             <CustomNavLink to="/stats" icon={<ImStatsDots   size={18} />}>
