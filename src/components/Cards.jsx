@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 import Card from "./ui/Card";
 import StatsCard from "./ui/StatsCard";
-import Modal from "./compound/Modal";
 import { useAppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
 
@@ -12,8 +10,8 @@ const Cards = () => {
 
   return (
     <>
-      <div className="container mx-auto">
-        <div className="grid grid-cols-4 items-center gap-4 py-10">
+      <div className="container mx-auto max-w-[90%]">
+        <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-4 py-10">
           <StatsCard title="Total Friends" value={data.length} />
           <StatsCard title="Mutual Friends" value="5" />
           <StatsCard title="Online Friends" value="3" />

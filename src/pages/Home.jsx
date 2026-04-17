@@ -1,6 +1,4 @@
-import React, { Suspense } from "react";
 import Hero from "../components/Hero";
-import Timeline from "./Timeline";
 import View from "../components/View";
 
 const Home = () => {
@@ -9,7 +7,6 @@ const Home = () => {
       <Hero />
 
       <View />
-
     </div>
   );
 };

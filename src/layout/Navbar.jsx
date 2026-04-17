@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="shadow-sm">
         <div className="container mx-auto max-w-[90%] flex items-center justify-between py-4">
           <div>
-            <h1 className="text-4xl font-bold">Friend<span className="text-[#244D3F]">Hub</span></h1>
+            <h1 className="text-3xl mr-4 md:text-4xl font-bold">Friend<span className="text-[#244D3F]">Hub</span></h1>
           </div>
           <div className="flex gap-1">
             <CustomNavLink to="/" icon={<FaHome  size={18} />}>

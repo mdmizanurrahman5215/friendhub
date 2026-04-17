@@ -14,7 +14,7 @@ const Timeline = () => {
 
   return (
     <div>
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-[90%]">
         <h1 className="text-3xl font-bold my-10">Timeline</h1>
         
         {timeline.length === 0 ? (
