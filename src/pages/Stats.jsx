@@ -1,6 +1,13 @@
 import React from "react";
 import { useAppContext } from "../context/AppContext";
-import { PieChart, Pie, ResponsiveContainer, Tooltip, Legend, Cell } from "recharts";
+import {
+  PieChart,
+  Pie,
+  ResponsiveContainer,
+  Tooltip,
+  Legend,
+  Cell,
+} from "recharts";
 import EmptyPage from "./EmptyPage";
 
 const Stats = () => {
@@ -15,41 +22,43 @@ const Stats = () => {
       }
       acc[item.type].value += 1;
       return acc;
-    }, {})
+    }, {}),
   );
 
   return (
-<>
-    {
-      timeline.length === 0 ? (
-           <div>
-            <EmptyPage/>
-           </div>
+    <>
+      <h1 className="text-4xl font-bold text-center mt-10">
+        Friendship Analytics
+      </h1>
+      {timeline.length === 0 ? (
+        <div>
+          <EmptyPage />
+        </div>
       ) : (
-         <div style={{ width: "100%", height: "400px" }}>
-      <ResponsiveContainer>
-        <PieChart>
-          <Pie
-            data={groupedData}
-            dataKey="value"
-            nameKey="name"
-            innerRadius="60%"
-            outerRadius="80%"
-          >
-            {groupedData.map((entry, index) => (
-              <Cell key={index} fill={COLORS[index % COLORS.length]} />
-            ))}
-          </Pie>
+        <div>
+          <div style={{ width: "100%", height: "400px" }}>
+            <ResponsiveContainer>
+              <PieChart>
+                <Pie
+                  data={groupedData}
+                  dataKey="value"
+                  nameKey="name"
+                  innerRadius="60%"
+                  outerRadius="80%"
+                >
+                  {groupedData.map((entry, index) => (
+                    <Cell key={index} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
 
-          <Tooltip />
-          <Legend />
-        </PieChart>
-      </ResponsiveContainer>
-    </div>
-      )
-    }
-</>
-   
+                <Tooltip />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
