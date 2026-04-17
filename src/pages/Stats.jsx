@@ -1,6 +1,7 @@
 import React from "react";
 import { useAppContext } from "../context/AppContext";
 import { PieChart, Pie, ResponsiveContainer, Tooltip, Legend, Cell } from "recharts";
+import EmptyPage from "./EmptyPage";
 
 const Stats = () => {
   const { timeline } = useAppContext();
@@ -18,7 +19,14 @@ const Stats = () => {
   );
 
   return (
-    <div style={{ width: "100%", height: "400px" }}>
+<>
+    {
+      timeline.length === 0 ? (
+           <div>
+            <EmptyPage/>
+           </div>
+      ) : (
+         <div style={{ width: "100%", height: "400px" }}>
       <ResponsiveContainer>
         <PieChart>
           <Pie
@@ -38,6 +46,10 @@ const Stats = () => {
         </PieChart>
       </ResponsiveContainer>
     </div>
+      )
+    }
+</>
+   
   );
 };
 
