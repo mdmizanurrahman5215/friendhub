@@ -50,8 +50,9 @@ const UserDetails = () => {
           icon: <BsChatLeftTextFill />,
           fill: "#10B981",
         },
-         toast.success(`Text with ${name}`)
+        
       ]);
+       toast.success(`Text with ${name}`)
     } else if (action === "Video") {
       setTimeline((prev) => [
         ...prev,
@@ -62,8 +63,9 @@ const UserDetails = () => {
           icon: <BiVideo />,
           fill: "#F59E0B",
         },
-         toast.success(`Video with ${name}`)
+        
       ]);
+       toast.success(`Video with ${name}`)
     }
   };
 
