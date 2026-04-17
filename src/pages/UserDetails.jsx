@@ -7,6 +7,7 @@ import { FaArchive, FaBell, FaTrash } from "react-icons/fa";
 import { BiSolidPhoneCall, BiVideo } from "react-icons/bi";
 import { BsChatLeftTextFill } from "react-icons/bs";
 import StatsCard from "../components/ui/StatsCard";
+import { toast } from "react-toastify";
 
 const UserDetails = () => {
   const { setTimeline } = useAppContext();
@@ -38,6 +39,7 @@ const UserDetails = () => {
           fill: "#4F46E5",
         },
       ]);
+      toast.success(`Call with ${name}`)
     } else if (action === "Text") {
       setTimeline((prev) => [
         ...prev,
@@ -48,6 +50,7 @@ const UserDetails = () => {
           icon: <BsChatLeftTextFill />,
           fill: "#10B981",
         },
+         toast.success(`Text with ${name}`)
       ]);
     } else if (action === "Video") {
       setTimeline((prev) => [
@@ -59,6 +62,7 @@ const UserDetails = () => {
           icon: <BiVideo />,
           fill: "#F59E0B",
         },
+         toast.success(`Video with ${name}`)
       ]);
     }
   };
