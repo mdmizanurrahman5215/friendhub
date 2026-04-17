@@ -1,16 +1,47 @@
-# React + Vite
+# 🚀 FriendHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Name  
+**FriendHub**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📝 Short Description  
+FriendHub is a social-style web application inspired by platforms like Facebook. It allows users to view their friends in a clean card-based UI and interact with them through different communication methods such as calling, texting, and video calling. Users can also track friend activity, view status updates, and monitor active time.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚙️ Technologies Used  
+- React JS  
+- React Router DOM  
+- JavaScript (ES6+)  
+- Tailwind CSS  
+- DaisyUI  
+- Recharts  
+- React Toastify  
+- React Icons  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Key Features  
+
+- 👥 Display friend list using responsive card layout  
+- 📞 Call, 💬 text, and 🎥 video call functionality  
+- 🕒 View interaction history in timeline format  
+- 📊 Activity analysis using pie chart (Recharts)  
+- 🔔 Toast notifications for actions (React Toastify)  
+- 📡 Friend status tracking and active time display  
+
+---
+
+## 🎯 Project Purpose  
+FriendHub is built to practice and demonstrate modern frontend development skills including component reusability, routing, state management, UI design, and data visualization.
+
+---
+
+## 📦 Installation & Setup  
+
+```bash
+git clone <[your-repo-link](https://github.com/mdmizanurrahman5215/friendhub)]>
+cd friendhub
+npm install
+npm run dev
