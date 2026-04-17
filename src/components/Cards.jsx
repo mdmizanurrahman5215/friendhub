@@ -2,10 +2,12 @@ import Card from "./ui/Card";
 import StatsCard from "./ui/StatsCard";
 import { useAppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
+import Loading from "./Loading";
 
 const Cards = () => {
-  const { data } = useAppContext();
+  const { data, loading } = useAppContext();
   const navigate = useNavigate()
+  if(loading) <Loading/>
 
 
   return (

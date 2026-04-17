@@ -14,7 +14,7 @@ const Hero = () => {
           relationships that matter most.
         </Banner.Description>
         <Banner.Actions>
-          <Button variant="primary" icon={<HiMiniPlus size={25} />}>
+          <Button  variant="primary" icon={<HiMiniPlus size={25} />}>
             Add a Friend
           </Button>
         </Banner.Actions>

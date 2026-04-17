@@ -154,7 +154,7 @@ const UserDetails = () => {
               </div>
               <p className="px-6">
                 Connect Every{" "}
-                <span className="text-2xl font-bold">30 days</span>
+                <span className="text-2xl font-semibold">30 days</span>
               </p>
             </div>
 

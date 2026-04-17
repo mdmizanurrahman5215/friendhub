@@ -7,7 +7,7 @@ export default function Button({
 
 }) {
   const base =
-    "flex items-center gap-2 px-4 py-2 rounded-lg transition-colors duration-200";
+    "flex items-center gap-2 px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer";
 
   const styles = {
     primary: "bg-[#244D3F] text-white hover:bg-[#1a3a2d]",
