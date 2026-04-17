@@ -23,7 +23,7 @@ const Cards = () => {
             <Card
               key={item.id}
               data={item}
-              onClick={()=>navigate(`user/${item.id}`,{state : item})}
+              onClick={()=>navigate(`/user/${item.id}`,{state : item})}
             />
           ))}
         </div>
