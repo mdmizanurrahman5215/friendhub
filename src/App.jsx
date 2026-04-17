@@ -7,6 +7,7 @@ import Timeline from "./pages/Timeline";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Footer from "./layout/Footer";
+import UserDetails from "./pages/UserDetails";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/stats" element={<Stats />} />
+        <Route path="/user/:id" element={<UserDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>

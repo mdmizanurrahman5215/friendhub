@@ -10,7 +10,6 @@ const Home = () => {
 
       <View />
 
-      {/* <Timeline/> */}
     </div>
   );
 };
